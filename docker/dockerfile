@@ -1,3 +1,9 @@
+# To build this image, use the following command:
+# docker build -t updatecpp .
+
+# To run a container named updatecpp-con from the updatecpp image, use the following command:
+# docker run --name updatecpp-con updatecpp
+
 # Use the OpenSUSE Tumbleweed base image
 FROM opensuse/tumbleweed
 
