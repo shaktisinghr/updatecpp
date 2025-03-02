@@ -1,0 +1,10 @@
+# Use the OpenSUSE Tumbleweed base image
+FROM opensuse/tumbleweed
+
+# Refresh the package list and install necessary packages: awk, git, and gcc-c++
+RUN zypper dup && \
+    zypper refresh && \
+    zypper install -y awk git gcc-c++ cmake
+
+# Keep the container running by tailing /dev/null
+ENTRYPOINT ["tail", "-f", "/dev/null"]
